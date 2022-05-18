@@ -8,7 +8,7 @@
  * @return  {number} number times 2
  */
  const doubleNum = (num) => {
-   //TODO
+  return num * 2
   };
   
   // part 2 use the method from above to double numbers in new array

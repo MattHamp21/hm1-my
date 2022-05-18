@@ -51,7 +51,17 @@ import {
     expect(returnValue2).toBe(0);
   });
   
+  it("test calc", () => {
+    let returnValue1 = calc(2,2,'+');
+    let returnValue2 = calc(2,2,'-');
+    let returnValue3 = calc(2,3,'*');
+    let returnValue4 = calc(2,2,'/');
   
+    expect(returnValue1).toBe(4);
+    expect(returnValue2).toBe(0);
+    expect(returnValue3).toBe(6);
+    expect(returnValue4).toBe(1);
+  });
   // getSum
   it("test getSum", () => {
     let returnValue1 = getSum([1, 2, 3]);
@@ -69,7 +79,7 @@ import {
     expect(returnValue2).toBe(4);
   });
   
-  it("test getLow", () => {
+  it("test getLowNum", () => {
     let returnValue1 = getLowNum([1, 2, 3]);
     let returnValue2 = getLowNum([4, 2, 1, -1]);
   

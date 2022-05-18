@@ -12,7 +12,7 @@
  * @returns {undefined}
  */
  const addItemToArray = (arr, item, index)=>{
-   //TODO
+ arr.splice(index,0,item);
 }
 
 /**
@@ -23,7 +23,11 @@
  * @returns {array} a new array with item added
  */
 const addItemToANewArray=(arr, item, index)=>{
-     //TODO
+  // arr.splice(index,0,item);
+  let newArr = [...arr];
+  newArr.splice(index, 0, item);
+  return newArr
+  // arr.splice(0,item,index);
 }
 
 /**
@@ -34,7 +38,7 @@ const addItemToANewArray=(arr, item, index)=>{
  * @returns {undefined}
  */
  const replaceItemToArray = (arr, item, index)=>{
-       //TODO
+   arr.splice(index,1,item);
 }
 
 /**
@@ -45,7 +49,10 @@ const addItemToANewArray=(arr, item, index)=>{
  * @returns {array} a new array with item added
  */
 const replaceItemToANewArray=(arr, item, index)=>{
-   //TODO
+   let newArr = [...arr];
+   newArr.splice(index, 1, item);
+   return newArr
+
 }
 
 module.exports = {
