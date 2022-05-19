@@ -8,7 +8,7 @@
  * @return  {number} number times 2
  */
  const doubleNum = (num) => {
-  return num * 2
+  return num * 2;
   };
   
   // part 2 use the method from above to double numbers in new array
@@ -18,7 +18,8 @@
    * @return {[number]} a NEW array with numbers doubled
    */
   const doubleArray = (arr) => {
-     //TODO
+    let map = arr.map( doubleNum);
+    return map
   };
   
   //2. write a function that takes an array of numbers
@@ -31,7 +32,12 @@
    * @return  {boolean} true if number was even false otherwise
    */
   const isEven = (num) => {
-      //TODO
+      if (num % 2 == 0){
+        return 'true'
+      }
+      else {
+        return 'false'
+      }
   };
   
   // part 2 use the method from above to double numbers in new array
@@ -41,7 +47,7 @@
    * @return {[number]} a NEW array with numbers doubled
    */
   const filterEvens = (arr) => {
-    //TODO
+    
   };
   
   isEven;

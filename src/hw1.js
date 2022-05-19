@@ -42,10 +42,7 @@ const calc = (num1, num2, opp) => {
 //Done
 const vowelCount = (str) => {
  let vowelCount = 0;
-
   for (let i = 0; i <= str.length - 1; i++) {
-
-  //if a vowel, add to vowel count
     if (str.charAt(i) == "a" || str.charAt(i) == "e" || str.charAt(i) == "i" || str.charAt(i) == "o" || str.charAt(i) == "u") {
       vowelCount += 1;
     }
@@ -76,14 +73,6 @@ const getLowNum = (numbers) => {
 /// function that takes an array of numbers and returns true if sorted (low to high only)
 // yarn jest -t 'test isSorted'
 const isSorted = (numbers) => {
-  for (numbers = 0; numbers < a.length; i++); { 
-    if (a[numbers] < a[numbers + 1]) {
-        return true;
-    }
-    else {
-        return false;
-    }
-  }
 };
 
 //  write a function that takes a number (0-100)
@@ -93,14 +82,14 @@ const isSorted = (numbers) => {
 //  return the number if none apply
 // yarn jest -t 'test fizzbuzz'
 
-//const fizzbuzz = (num) => {
-    //if (num < && num > 100) {
-      //return invalid
-  
-    
-//    }
-   
-//};
+const fizzbuzz = (num) => {
+  if (num / 3) return 'fizz';
+  if (num / 5) return 'buzz';
+  if (num / 3 && num / 5 ) return 'fizzbuzz';
+  else {
+    return num
+  }
+};
 
 module.exports = {
   doubleNumber,
