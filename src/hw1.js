@@ -19,8 +19,9 @@ const isOddOrEven = (num) => {
 //function that return a random number 0-5
 // yarn jest -t 'test randomNumber'
 //-------
-const randomNumber = () => {
-  return Math.random() * (5 - 0) + 0;
+const randomNumber = (maxLimit = 5) => {
+  let rand = Math.random() * maxLimit
+  return Math.round(rand);
 };
 //come back
 
@@ -73,7 +74,15 @@ const getLowNum = (numbers) => {
 /// function that takes an array of numbers and returns true if sorted (low to high only)
 // yarn jest -t 'test isSorted'
 const isSorted = (numbers) => {
-};
+  for (numbers = 0; i < numbers.length; i++); { 
+    if (numbers[i] < numbers[numbers + 1]) {
+        return true;
+    }
+    else {
+        return false;
+    }
+  }
+}
 
 //  write a function that takes a number (0-100)
 //  return 'fizz' if only divisible by 3
@@ -83,14 +92,18 @@ const isSorted = (numbers) => {
 // yarn jest -t 'test fizzbuzz'
 
 const fizzbuzz = (num) => {
-  if (num / 3) return 'fizz';
-  if (num / 5) return 'buzz';
-  if (num / 3 && num / 5 ) return 'fizzbuzz';
-  else {
-    return num
-  }
-};
-
+ if (num < 0  && num > 100) {
+   return invalid
+ } else if (num % 3 === 0 && (num % 5 !==0)) {
+   return 'fizz'
+ } else if (num % 5 === 0 && (num % 3 !== 0)) {
+   return 'buzz'
+ } else if (num % 3 === 0 && num % 5 === 0){
+   return 'fizzbuzz'
+ } else {
+   return num
+ }
+}
 module.exports = {
   doubleNumber,
   vowelCount,

@@ -86,6 +86,7 @@ let femaleChr = characters.filter(chr=>{
 let sortMass = characters.sort(function(a,b){
   return a.mass - b.mass;
 })
+console.log(sortMass)
 let sortHeight = characters.sort(function(a,b){
   return a.height - b.height;
 })
@@ -147,17 +148,23 @@ let cuteMass = characters.some(chr=>{
 //2. Get total height of all characters
 //3. Get total number of characters by eye color
 //4. Get total number of characters in all the character names
-
-let totalMass = characters.reduce(chr=>{
-return chr.mass / 4
-})
-console.log(totalMass)
-
-
-
-
-
-
+let myVar = characters.reduce((accum, currents)=>{
+  accum += parseInt(currents.mass);
+  return accum
+}, 0)
+console.log(myVar)
+let totalHight = characters.reduce((accum,currents)=>{
+  accum += parseInt(currents.height);
+  return accum
+}, 0)
+let totalEyes = characters.reduce((accum,currents)=>{
+  accum += parseInt(currents.eye_color);
+  return accum
+},{brown:0, blue:0, yellow:0,})
+let chrsName = characters.reduce((accum,currents)=>{
+  accum += parseInt(currents.names.split('').length -1);
+  return accum
+}, 0)
 //***Bonus***/
 // come up with your own
 

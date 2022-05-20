@@ -40,7 +40,7 @@
       }
   };
   
-  // part 2 use the method from above to double numbers in new array
+  // part 2 use the method from above retrun even numbers in new array
   /**
    * doubles numbers from given array into a new array
    * @param  {[number]} arr: an array of numbers to be doubled
@@ -49,8 +49,6 @@
   const filterEvens = (arr) => {
     let newMap = arr.map( isEven);
   };
-  
-  isEven;
   
   module.exports = {
     doubleNum,
