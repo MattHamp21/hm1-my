@@ -47,7 +47,7 @@
    * @return {[number]} a NEW array with numbers doubled
    */
   const filterEvens = (arr) => {
-    
+    let newMap = arr.map( isEven);
   };
   
   isEven;
